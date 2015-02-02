@@ -1,4 +1,71 @@
-app/*
-js/*
-!app/code/local/MST/*
-!js/titan/*
+#############
+## MAGENTO SOURCE CODE
+#############
+app/.htaccess
+app/Mage.php
+## Accept all files in local/MST only
+app/*/core/*
+app/*/community/*
+app/*/local/*/*
+
+##Loại bỏ các files, thư mục ngoại trừ các file trong local/MST/
+
+app/*/local/*.*
+app/*/local/*/*
+!app/*/local/MST/*
+app/etc/
+app/locale/
+###+++++++++++++++++++++++ app/design/adminhtml/ ++++++++++++++++++++++++++++
+##Loại bỏ tất cả các files trong thư mục adminhtml/default/default ngoại trừ các file layout và template cúa magebay
+
+##-----Layout-------
+
+app/design/adminhtml/default/default/layout/*
+!app/design/adminhtml/default/default/layout/titan.xml
+!app/design/adminhtml/default/default/layout/menupro.xml
+!app/design/adminhtml/default/default/layout/pdp.xml
+
+##-----template-------
+
+app/design/adminhtml/default/default/*.*
+app/design/adminhtml/default/default/etc/*
+app/design/adminhtml/default/default/locale/*
+app/design/adminhtml/default/default/template/*/*
+app/design/adminhtml/default/default/template/*.*
+!app/design/adminhtml/default/default/template/titan/*
+!app/design/adminhtml/default/default/template/menupro/*
+!app/design/adminhtml/default/default/template/pdp/*
+
+###+++++++++++++++++++++++ app/design/frontend/ ++++++++++++++++++++++++++++
+app/design/install/
+app/design/frontend/*/*
+app/design/frontend/*.*
+!app/design/frontend/t2/*
+downloader/
+var/
+errors/
+includes/
+shell/
+pkginfo/
+js/
+lib/
+media/
+skin/adminhtml/default/default/
+skin/frontend/
+skin/install/
+.htaccess
+.htaccess.sample
+api.php
+cron.php
+cron.sh
+favicon.ico
+get.php
+index.php
+index.php.sample
+install.php
+LICENSE.html
+LICENSE.txt
+LICENSE_AFL.txt
+mage
+php.ini.sample
+RELEASE_NOTES.txt
